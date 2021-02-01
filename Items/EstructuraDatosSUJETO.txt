@@ -1,0 +1,56 @@
+123 = [contraseña]
+--------------------------
+MANERA #1:
+	  0,1 = [ Etapa 0 = Tutorial ;; Mision 1 del Turorial ]
+MANERA #2:
+	  0 = [ Etapa 0 = Tutorial ]
+	  1 = [ Mision 1 del Tutorial ]
+--------------------------
+1369 = [ Exp ] *4 
+14  = [ Lvl ] *2
+0   = [ Cambió la contraseña? ] *1
+IDSA991 = [ ID Sistema ] *3
+
+
+
+
+======================================
+REFERENCIAS:
+ *1) Se aumenta +1 si pasa misiones y no cambia su ID de Sistema, ya que lo encontraran con 		facilidad. Su abreviacion es CgePass
+
+ *2) A medidad que aumente su nivel, mas dificil le será subir ya que el Rango de Exp se          
+        multiplicará. Regla:  02Lvl ----- 217Exp
+			      32Lvl -----   X
+				X = (Lvl*Exp) / LvlBase - Cte
+				X = (32*217) / 2 = 3472 - [ 0 - 230 ]
+
+ *3) El ID Sistema permite un màximo de 13 Caracteres
+     Hay clases de ID, unos mejores que otros
+	Los de 1 a 4 Char tiene como tolerancia de CgePass = 3
+	----Para este rango Debe de empezar con ID14 + _ + 8Char que indique el sujeto
+	---------Para este ID14 tiene que tener LVL=(0-11)
+	Los de 5 a 7 Char tiene como tolerancia de CgePass = 8
+	----Para este rango Debe de empezar con ID57 + _ + 8Char que indique el sujeto
+	---------Para este ID57 tiene que tener LVL=(11-23)
+	Los de 8 a 10 Char tiene como tolerancia de CgePass = 11
+	----Para este rango Debe de empezar con ID810 + _ + 7Char que indique el sujeto
+	---------Para este ID810 tiene que tener LVL=(24-51)
+	Los de 11 a 13 Char tiene como tolerancia de CgePass = 13
+	----Para este rango Debe de empezar con ID1113 + _ + 6har que indique el sujeto
+	---------Para este ID1113 tiene que tener LVL=(52-75)
+
+ *4) El 1369 sale de ( (14*217) / 2 ) - Cte=160
+	14: LVL
+	217: Regla
+	2: Regla
+	Cte: Random 0-230
+
+======================================
+ACLARACIONES:
+ 1) ID Sistema != Nombre Sujeto
+	ID Sistema: SSIDA20001-->Dinamico y se DEBE de cambiar a medida que pasa Misiones
+	Nombre: Alberto--------->Estático y se puede cambiar en el Menu Principal
+
+ 2) Cte es una constante que se define por un valor Randomico
+	que puede ir desde 0 a 230 su valor
+    A mayo Nª de Cte => Mas facil es subir de Lvl, ya que se acorta
